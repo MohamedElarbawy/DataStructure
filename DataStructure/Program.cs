@@ -11,4 +11,10 @@ s.Pop();
 Console.WriteLine(s.GetTop());
 s.Clear();
 Console.WriteLine(s.GetTop());
-LinkedList<int> l= new LinkedList<int>();
+
+
+
+OurLinkedList<int> ourLinkedList = new OurLinkedList<int>();
+ourLinkedList.InsertLast(ourLinkedList,5);
+ourLinkedList.InsertLast(ourLinkedList,9);
+ourLinkedList.InsertLast(ourLinkedList,6);

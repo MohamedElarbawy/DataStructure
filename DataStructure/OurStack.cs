@@ -46,7 +46,7 @@ namespace DataStructure
                 Console.WriteLine("the stack is empty you can't get any elements");
 
             return items[top];
-           
+            
         }
 
 
