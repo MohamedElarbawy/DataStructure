@@ -25,4 +25,4 @@ q.Enqueue("I");
 q.Enqueue("am");
 q.Dequeue();
 q.Enqueue("mohamed");
-q.PrintArray();
+q.PrintQueue();

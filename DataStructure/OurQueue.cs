@@ -60,7 +60,7 @@ namespace DataStructure
                 Console.WriteLine("thq queue is empty");
             return arr[last];
         }
-        public void PrintArray()
+        public void PrintQueue()
         {
             for (int i = first; i!= last+1; i=(i+1)%maxSize)
             {

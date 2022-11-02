@@ -6,10 +6,15 @@ using System.Threading.Tasks;
 
 namespace DataStructure
 {
+    /// <summary>
+    /// linked list has faster access time and can be expanded in constant time without memory overhead.
+    /// Insertion and deletion is easy to implement.
+    /// </summary>
+    /// <typeparam></typeparam>
     public class OurLinkedList<T> //I named it OurLinkedList to avoid conflict with LinkedList class in collections.generics
     {
 
-        public Node<T> Head;
+        public Node<T>? Head;
         public void InsertFront(OurLinkedList<T> linkedList, T newItem)
         {
             Node<T> newNode = new Node<T>(newItem);
@@ -46,22 +51,25 @@ namespace DataStructure
 
         }
 
+        public void ReverseLinkedList(OurLinkedList<T> linkedList)
+        {
+            Node<T>? prev = null;
+            Node<T>? currnet = linkedList.Head;
+            Node<T>? temp = null;
+            while (currnet != null)
+            {
+                temp=currnet.next;
+                currnet.next = prev;
+                currnet = temp;
+            }
+            linkedList.Head = prev;
 
+        }
         
 
 
     }
 
 
-    public class Node<T>
-    {
-       public T item;
-        public Node<T>? next;
-        public Node(T item)
-        {
-            this.item = item;
-            next = null;
-
-        }
-    }
+   
 }
