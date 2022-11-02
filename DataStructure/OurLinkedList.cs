@@ -45,9 +45,14 @@ namespace DataStructure
 
         public void InsertAfter(Node<T> prevNode,T newItem)
         {
+            if(prevNode == null)
+                Console.WriteLine("The given previous node Cannot be null");
+            else
+            {
             Node<T> newNode = new Node<T>(newItem);
             newNode.next=prevNode.next;
             prevNode.next = newNode;
+            }
 
         }
 
